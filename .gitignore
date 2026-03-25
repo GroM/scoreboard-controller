@@ -1,0 +1,12 @@
+build/
+out/
+.vs/
+*.user
+*.obj
+*.o
+*.pdb
+*.ilk
+*.exe
+*.bin
+*.elf
+*.map
