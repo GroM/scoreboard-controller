@@ -26,7 +26,6 @@ The editable source of truth for LVGL Pro is:
 - `widgets/`
 - `fonts/`
 - `images/`
-- `CMakeLists.txt`
 
 This is the project structure LVGL Pro expects for an editable XML-based project.
 
@@ -47,7 +46,6 @@ Runtime/exported code should be generated from the editor later instead of maint
 - `project.xml`: LVGL Pro project definition and target display
 - `screens/scoreboard.xml`: editable scoreboard screen with local styles
 - `components/`, `widgets/`, `fonts/`, `images/`: supporting project folders for future XML assets and reuse
-- `CMakeLists.txt`: optional project helper file kept with the editor-facing project layout
 
 ## LVGL 8 Note
 

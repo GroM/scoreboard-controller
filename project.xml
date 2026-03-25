@@ -1,0 +1,7 @@
+<project name="scoreboard_controller">
+    <targets>
+        <target name="waveshare_esp32_s3_3_49_landscape">
+            <display width="640" height="172" color_format="RGB565"/>
+        </target>
+    </targets>
+</project>
