@@ -4,7 +4,12 @@
     </api>
 
     <consts>
-        <!-- Add <px>, <int>, <color> etc here -->
+        <int name="screen_width" value="640"/>
+        <int name="screen_height" value="172"/>
+        <int name="edge_button_width" value="88"/>
+        <int name="edge_button_height" value="72"/>
+        <int name="timer_button_width" value="76"/>
+        <int name="timer_button_height" value="56"/>
     </consts>
 
     <styles>

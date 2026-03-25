@@ -20,14 +20,15 @@ The score buttons stay on the outer edges, while the timer and score values rema
 
 The editable source of truth for LVGL Pro is:
 
-- `project.xml`
+- `globals.xml`
 - `screens/scoreboard.xml`
 - `components/`
 - `widgets/`
 - `fonts/`
 - `images/`
+- `CMakeLists.txt`
 
-This is the project structure LVGL Pro expects for an editable XML-based project.
+This now mirrors the generated `ui/` skeleton from the current branch, which is a better baseline for editor compatibility than the earlier guessed `project.xml` layout.
 
 ## Current Scope
 
@@ -43,13 +44,14 @@ Runtime/exported code should be generated from the editor later instead of maint
 
 ## Files
 
-- `project.xml`: LVGL Pro project definition and target display
+- `globals.xml`: global declarations and shared project placeholders
 - `screens/scoreboard.xml`: editable scoreboard screen with local styles
 - `components/`, `widgets/`, `fonts/`, `images/`: supporting project folders for future XML assets and reuse
+- `CMakeLists.txt`: preview/runtime helper used by the editor flow
 
 ## LVGL 8 Note
 
-The repository has been cleaned so it no longer carries a handwritten C scaffold with mixed-version assumptions. If your LVGL Pro installation offers an LVGL 8 code-generation/export target, that generated output should be treated as a build artifact derived from these XML files rather than committed as the maintained source.
+The repository has been cleaned so it no longer carries a handwritten C scaffold with mixed-version assumptions. This root layout is now based on the `/ui` folder skeleton from the current branch.
 
 ## Editor Friendliness
 
