@@ -1,41 +1,41 @@
-<screen>
-    <lv_obj id="root" width="$screen_width" height="$screen_height">
-        <lv_btn id="home_plus" x="8" y="8" width="$edge_button_width" height="$edge_button_height">
-            <lv_label text="+1" align="center"/>
-        </lv_btn>
+<screen permanent="true">
+	<view width="#screen_width" height="#screen_height" extends="lv_obj">
+		<lv_button name="home_plus" x="8" y="8" width="#edge_button_width" height="#edge_button_height">
+			<lv_label text="+1" align="center" />
+		</lv_button>
 
-        <lv_btn id="home_minus" x="8" y="92" width="$edge_button_width" height="$edge_button_height">
-            <lv_label text="-1" align="center"/>
-        </lv_btn>
+		<lv_button name="home_minus" x="8" y="92" width="#edge_button_width" height="#edge_button_height">
+			<lv_label text="-1" align="center" />
+		</lv_button>
 
-        <lv_label id="home_score" x="124" y="70" text="0"/>
+		<lv_label name="home_score" x="124" y="70" text="0" />
 
-        <lv_btn id="timer_toggle" x="196" y="8" width="248" height="72">
-            <lv_label id="timer_value" text="00:00" align="center"/>
-        </lv_btn>
+		<lv_button name="timer_toggle" x="196" y="8" width="248" height="72">
+			<lv_label name="timer_value" text="00:00" align="center" />
+		</lv_button>
 
-        <lv_label id="timer_status" x="306" y="88" text="PAUSE"/>
+		<lv_label name="timer_status" x="306" y="88" text="PAUSE" />
 
-        <lv_btn id="timer_start" x="196" y="104" width="$timer_button_width" height="$timer_button_height">
-            <lv_label text="Start" align="center"/>
-        </lv_btn>
+		<lv_button name="timer_start" x="196" y="104" width="#timer_button_width" height="#timer_button_height">
+			<lv_label text="Start" align="center" />
+		</lv_button>
 
-        <lv_btn id="timer_pause" x="282" y="104" width="$timer_button_width" height="$timer_button_height">
-            <lv_label text="Pause" align="center"/>
-        </lv_btn>
+		<lv_button name="timer_pause" x="282" y="104" width="#timer_button_width" height="#timer_button_height">
+			<lv_label text="Pause" align="center" />
+		</lv_button>
 
-        <lv_btn id="timer_reset" x="368" y="104" width="$timer_button_width" height="$timer_button_height">
-            <lv_label text="Reset" align="center"/>
-        </lv_btn>
+		<lv_button name="timer_reset" x="368" y="104" width="#timer_button_width" height="#timer_button_height">
+			<lv_label text="Reset" align="center" />
+		</lv_button>
 
-        <lv_label id="guest_score" x="492" y="70" text="0"/>
+		<lv_label name="guest_score" x="492" y="70" text="0" />
 
-        <lv_btn id="guest_plus" x="544" y="8" width="$edge_button_width" height="$edge_button_height">
-            <lv_label text="+1" align="center"/>
-        </lv_btn>
+		<lv_button name="guest_plus" x="544" y="8" width="#edge_button_width" height="#edge_button_height">
+			<lv_label text="+1" align="center" />
+		</lv_button>
 
-        <lv_btn id="guest_minus" x="544" y="92" width="$edge_button_width" height="$edge_button_height">
-            <lv_label text="-1" align="center"/>
-        </lv_btn>
-    </lv_obj>
+		<lv_button name="guest_minus" x="544" y="92" width="#edge_button_width" height="#edge_button_height">
+			<lv_label text="-1" align="center" />
+		</lv_button>
+	</view>
 </screen>

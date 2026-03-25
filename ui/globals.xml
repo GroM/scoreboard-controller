@@ -1,30 +1,30 @@
 <globals>
-    <api>
-        <!-- Add <enumdefs> here -->
-    </api>
+	<api>
+		<!-- Add <enumdefs> here -->
+	</api>
 
-    <consts>
-        <int name="screen_width" value="640"/>
-        <int name="screen_height" value="172"/>
-        <int name="edge_button_width" value="88"/>
-        <int name="edge_button_height" value="72"/>
-        <int name="timer_button_width" value="76"/>
-        <int name="timer_button_height" value="56"/>
-    </consts>
+	<consts>
+		<px name="screen_width" value="640" />
+		<px name="screen_height" value="172" />
+		<px name="edge_button_width" value="88" />
+		<px name="edge_button_height" value="72" />
+		<px name="timer_button_width" value="76" />
+		<px name="timer_button_height" value="56" />
+	</consts>
 
-    <styles>
-        <!-- Add <style> tags here -->
-    </styles>
+	<styles>
+		<!-- Add <style> tags here -->
+	</styles>
 
-    <subjects>
-        <!-- Add <int>, <string>, or <float> subjects here -->
-    </subjects>
+	<subjects>
+		<!-- Add <int>, <string>, or <float> subjects here -->
+	</subjects>
 
-    <images>
-        <!-- Add <file> or <data> tags here -->
-    </images>
+	<images>
+		<!-- Add <file> or <data> tags here -->
+	</images>
 
-    <fonts>
-        <!-- Add <bin> , <tiny_ttf>, <freetype> tags here -->
-    </fonts>
+	<fonts>
+		<!-- Add <bin> , <tiny_ttf>, <freetype> tags here -->
+	</fonts>
 </globals>
