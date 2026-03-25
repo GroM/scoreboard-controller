@@ -1,173 +1,43 @@
 <screen>
-    <styles>
-        <style name="screen_root"
-               pad_all="4"
-               pad_row="4"
-               pad_column="4"
-               bg_color="0x101418"
-               bg_opa="COVER"
-               border_width="0"
-               radius="0"/>
-        <style name="column_style"
-               pad_all="0"
-               pad_row="4"
-               pad_column="4"
-               bg_opa="TRANSP"
-               border_width="0"
-               radius="0"/>
-        <style name="score_button_style"
-               bg_color="0x27313a"
-               text_color="0xffffff"
-               border_width="0"
-               radius="10"/>
-        <style name="timer_button_style"
-               bg_color="0x1f2a33"
-               text_color="0xffffff"
-               border_width="0"
-               radius="12"/>
-        <style name="timer_control_style"
-               bg_color="0x314250"
-               text_color="0xffffff"
-               border_width="0"
-               radius="10"/>
-        <style name="score_label_style"
-               text_color="0xffffff"
-               text_font="lv_font_montserrat_28"/>
-        <style name="timer_label_style"
-               text_color="0xffffff"
-               text_font="lv_font_montserrat_24"/>
-        <style name="status_label_style"
-               text_color="0xa8b6c4"
-               text_font="lv_font_montserrat_14"/>
-    </styles>
+    <view>
+        <lv_obj width="640" height="172">
+            <lv_btn id="home_plus" x="8" y="8" width="88" height="72">
+                <lv_label text="+1" align="center"/>
+            </lv_btn>
 
-    <view extends="lv_obj"
-          width="640"
-          height="172"
-          layout="flex"
-          flex_flow="row"
-          flex_main_place="space_evenly"
-          flex_cross_place="center"
-          flex_track_place="center">
-        <style name="screen_root"/>
+            <lv_btn id="home_minus" x="8" y="92" width="88" height="72">
+                <lv_label text="-1" align="center"/>
+            </lv_btn>
 
-        <lv_obj id="home_controls"
-                width="96"
-                height="100%"
-                layout="flex"
-                flex_flow="column"
-                flex_main_place="space_evenly"
-                flex_cross_place="center"
-                flex_track_place="center">
-            <style name="column_style"/>
-            <lv_button id="home_plus" width="100%" height="78">
-                <style name="score_button_style"/>
-                <lv_label text="+1"/>
-            </lv_button>
-            <lv_button id="home_minus" width="100%" height="78">
-                <style name="score_button_style"/>
-                <lv_label text="-1"/>
-            </lv_button>
-        </lv_obj>
+            <lv_label id="home_score" x="124" y="70" text="0"/>
 
-        <lv_obj id="home_score_column"
-                width="92"
-                height="100%"
-                layout="flex"
-                flex_flow="column"
-                flex_main_place="center"
-                flex_cross_place="center"
-                flex_track_place="center">
-            <style name="column_style"/>
-            <lv_label id="home_score" text="0">
-                <style name="score_label_style"/>
-            </lv_label>
-        </lv_obj>
+            <lv_btn id="timer_toggle" x="196" y="8" width="248" height="72">
+                <lv_label id="timer_value" text="00:00" align="center"/>
+            </lv_btn>
 
-        <lv_obj id="timer_column"
-                width="248"
-                height="100%"
-                layout="flex"
-                flex_flow="column"
-                flex_main_place="center"
-                flex_cross_place="center"
-                flex_track_place="center">
-            <style name="column_style"/>
+            <lv_label id="timer_status" x="306" y="88" text="PAUSE"/>
 
-            <lv_button id="timer_toggle"
-                       width="100%"
-                       height="72"
-                       layout="flex"
-                       flex_flow="row"
-                       flex_main_place="center"
-                       flex_cross_place="center"
-                       flex_track_place="center">
-                <style name="timer_button_style"/>
-                <lv_label id="timer_value" text="00:00">
-                    <style name="timer_label_style"/>
-                </lv_label>
-                <lv_label id="timer_status" text="PAUSE">
-                    <style name="status_label_style"/>
-                </lv_label>
-            </lv_button>
+            <lv_btn id="timer_start" x="196" y="104" width="76" height="56">
+                <lv_label text="Start" align="center"/>
+            </lv_btn>
 
-            <lv_obj id="timer_buttons_row"
-                    width="100%"
-                    height="60"
-                    layout="flex"
-                    flex_flow="row"
-                    flex_main_place="space_evenly"
-                    flex_cross_place="center"
-                    flex_track_place="center">
-                <style name="column_style"/>
-                <lv_button id="timer_start" width="76" height="60">
-                    <style name="timer_control_style"/>
-                    <lv_label text="Start"/>
-                </lv_button>
+            <lv_btn id="timer_pause" x="282" y="104" width="76" height="56">
+                <lv_label text="Pause" align="center"/>
+            </lv_btn>
 
-                <lv_button id="timer_pause" width="76" height="60">
-                    <style name="timer_control_style"/>
-                    <lv_label text="Pause"/>
-                </lv_button>
+            <lv_btn id="timer_reset" x="368" y="104" width="76" height="56">
+                <lv_label text="Reset" align="center"/>
+            </lv_btn>
 
-                <lv_button id="timer_reset" width="76" height="60">
-                    <style name="timer_control_style"/>
-                    <lv_label text="Reset"/>
-                </lv_button>
-            </lv_obj>
-        </lv_obj>
+            <lv_label id="guest_score" x="492" y="70" text="0"/>
 
-        <lv_obj id="guest_score_column"
-                width="92"
-                height="100%"
-                layout="flex"
-                flex_flow="column"
-                flex_main_place="center"
-                flex_cross_place="center"
-                flex_track_place="center">
-            <style name="column_style"/>
-            <lv_label id="guest_score" text="0">
-                <style name="score_label_style"/>
-            </lv_label>
-        </lv_obj>
+            <lv_btn id="guest_plus" x="544" y="8" width="88" height="72">
+                <lv_label text="+1" align="center"/>
+            </lv_btn>
 
-        <lv_obj id="guest_controls"
-                width="96"
-                height="100%"
-                layout="flex"
-                flex_flow="column"
-                flex_main_place="space_evenly"
-                flex_cross_place="center"
-                flex_track_place="center">
-            <style name="column_style"/>
-            <lv_button id="guest_plus" width="100%" height="78">
-                <style name="score_button_style"/>
-                <lv_label text="+1"/>
-            </lv_button>
-            <lv_button id="guest_minus" width="100%" height="78">
-                <style name="score_button_style"/>
-                <lv_label text="-1"/>
-            </lv_button>
+            <lv_btn id="guest_minus" x="544" y="92" width="88" height="72">
+                <lv_label text="-1" align="center"/>
+            </lv_btn>
         </lv_obj>
     </view>
 </screen>
